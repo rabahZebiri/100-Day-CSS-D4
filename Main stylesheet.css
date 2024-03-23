@@ -1,0 +1,57 @@
+:root{
+    box-sizing: border-box;
+    --frame-background-color:#002447;
+    --bubbles:#ffffff;
+}
+*,::after,::before{
+    box-sizing: inherit;
+}
+body{
+    background-color:white;
+    height: 100vh;
+}
+body,div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--bubbles);
+    
+}
+.frame{
+    width: 400px;
+    height: 400px;
+    background-color: var(--frame-background-color);
+    border-radius: 2%;
+}
+.first-circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    animation: growing-shrinking 4s ease-out 0s infinite;
+}
+.second-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    animation: growing-shrinking 2s ease-in-out 1.9s infinite;
+}
+.third-circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    animation: growing-shrinking 1s ease-in-out 2s infinite;
+}
+
+@keyframes growing-shrinking{
+    0%{
+        transform: scale(1);    }
+    50%,65%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
